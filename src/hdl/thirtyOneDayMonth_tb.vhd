@@ -117,11 +117,11 @@ begin
         w_sw <= x"C"; wait for 10 ns;
             assert w_Y = '1' report "error on Dec" severity failure;
         w_sw <= x"D"; wait for 10 ns;
-            assert w_Y = 'X' report "error on last 1" severity failure;
+            assert w_Y = '0' report "error on last 1" severity failure;
         w_sw <= x"E"; wait for 10 ns;
-            assert w_Y = 'X' report "error on last 2" severity failure;
+            assert w_Y = '1' report "error on last 2" severity failure;
         w_sw <= x"F"; wait for 10 ns;
-            assert w_Y = 'X' report "error on last 3" severity failure;
+            assert w_Y = '0' report "error on last 3" severity failure;
 
 
 		wait; -- wait forever
